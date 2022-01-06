@@ -1,0 +1,33 @@
+# Files to not commit to git
+bin/
+# code and labs are for assignments deployed via Github classroom
+code/
+labs/
+misc/
+old/
+# This is a separate repository.
+resources/
+__pycache__/
+_site/
+.*
+!.gitignore
+*.bak
+*.ctxt
+*.lock
+*.log
+.~lock*
+header.md
+# index.html is auto-generated from index.md, but subdir indices are created by me
+/index.html
+# symbolic link used to make local site paths match those on github.io site
+# if you commit this is Github, the github.io site won't work 
+# Doesn't work locally, either. Causes infinite recursion during Jekyll processing.
+ISP
+# stuff not to publish
+misc/
+private/
+quiz/
+Jittat/
+Paruj/
+solution/
+TA/
