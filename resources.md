@@ -2,23 +2,22 @@
 title: Resources
 ---
 
-## Visual Tutor: [www.pythontutor.com](www.pythontotor.com)
+## Python Visual Tutor: [www.pythontutor.com](www.pythontotor.com)
 
-Vusualizes what a code is doing to memory.
+Visualizes what Python code is doing to memory.
 
 ## Anaconda and Miniconda Python Distributions
 
+In the 2nd half of the course you will use numpy, scipy, pandas and Jupyter notebooks. You can add these packages to an ordinary Python 3 installation, or install everything at once (including Python) using "Anaconda" or "Miniconda" bundles.
+
 These distributions provide Python along with many packages and a virtual environment manager.
 
-* [Anaconda](https://www.anaconda.com/download) approx 660MB.
-* [Miniconda](https://conda.io/miniconda.html) ??MB.
-* [Intel Python](https://software.intel.com/en-us/distribution-for-python) optimized for Intel processors. It really is faster.  3 ways to install:
-  - Stand-alone version
-  - Conda Packages
-  - Docker Images
+* [Anaconda](https://www.anaconda.com/download) approx 660 MB.
+* [Miniconda](https://conda.io/miniconda.html) approx 60 MB.
 
 ## Online Books
 
+- [Composing Programs](http://composingprograms.com/), especially Chapter 1 (Functional Programming)
 - [LearnPython](https://www.learnpython.org/) collection of topic-specific tutorials. The book *Learn Python* is one of the best Python books, but *too long*.
 - [Python Books on Github](https://github.com/pamoroso/free-python-books)
 - [Invent With Python](https://inventwithpython.com) has several books. Online versions are free.
@@ -41,15 +40,16 @@ These are highly recommended by multiple sources, but I have not tried them myse
 2. [Complete Python Master Class](https://codingthesmartway.com/courses/python-masterclass), 37.5 hours. 330 Baht.
 
 
-## Adding Intel's Python Channel to Anaconda
+## Intel's Python and Python Channel for Anaconda
 
 Intel has a high-performance implementation of many Python libraries,
 that are much faster than the standard Python libraries.
-If you want to do compute-intensive work in Python on an Intel CPU,
-it is worth trying. For just learning Python there is no benefit.
+If you plan to do compute-intensive work in Python on an Intel CPU,
+it is worth trying.  For just learning Python there is no benefit.
 
-You can download it as a separate installation, or add a "channel" to
-your Anaconda distribution.  To add a channel to Anaconda:
+You can download [Intel Python](https://software.intel.com/en-us/distribution-for-python) as a separate distribution.
+Or, add a "channel" to your existing Anaconda distribution.  
+To add a channel to Anaconda:
 
 ```
 conda update conda
