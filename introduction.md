@@ -6,12 +6,11 @@ This course covers
 
 1. Object-oriented design and programming, including some design patterns
 2. Functional programming 
-3. Guidelines for writing good quality code
+3. Writing good quality code
 4. Graphical applications and graphical user interfaces using Tkinter
 5. Data exploration and scientific programming using Jupyter Notebooks
 
-
-### Course Objectives (What You Will Hopefully Learn)
+### Course Objectives (What You Learn)
 
 Learn to design, implement, and test applications with several components. Learn how to use libraries or frameworks to build on existing code, and to manage your code and project documents in a version control system; in particular, be able to use git and Github.
 
@@ -28,37 +27,13 @@ Students need to commit several hours per week to read, study, and do assignment
 Everyone is required to do the assigned work **individually**.  Please do not ask other students to "teach" you or copy work from anyone else.
 If you need help, please ask the TAs or instructors.
 
-### Coursework
-
-1. 
-
 ### Topics
 
-The topics are listed on the [topics page](../index). 
-
-### Online Course Material 
-
-
-### Resources
-
-
-
-
-
-
-### Requirement for Individual Work
-
-All assignments *must* be done **individually**, unless group work is explicitly allowed.
-
-It is OK to discuss an approach to solving a problem, but not to share code.  If you need help, please ask the TAs or instructors rather than the other students (who may not give you the correct answer).
-
-### Copying == Fail
-
-Anyone who submits **any** copied work will receive grade "F" and be reported to Faculty of Engineering for disciplinary action.
+The weekly topics are posted on Google Classroom. 
 
 ### Course Work & Grading
 
-Your grade is based on:
+The course and your grade include:
 
 * written exams 
 * programming exams
@@ -75,10 +50,22 @@ If you achieve the minimum exam score, then the following grading scale is used 
 | Overall | Grade |
 |---------|-------|
 |  > 85%  |   A   |
-| 75-85   |   B   |
-| 65-75   |   C   |
-| 55-65   |   D   |
+| 75-85%  |   B   |
+| 65-75%  |   C   |
+| 55-65%  |   D   |
 |  < 55%  |   F   |
+
+### Requirement for Individual Work
+
+All assignments must be done **individually**, unless group work is explicitly allowed.
+
+It is OK to discuss an approach to solving a problem, but not to share solutions or code.  If you need help, please ask the TAs or instructors rather than the other students (who may not give you the correct answer).
+
+### Copying == Fail
+
+Anyone who submits **any** copied work will receive grade "F" and be reported to Faculty of Engineering for disciplinary action.
+
+Both the copier and the person who knowingly supplied the material will receive "F" and be reported.
 
 ### Assignments using Github Classroom 
 
