@@ -20,11 +20,11 @@ You should learn guidelines for writing good quality code,
 including a coding convention and coding standard, 
 and design principles and patterns to help you design good software.
 
-### Requirements 
+### Effort 
 
-Students need to commit several hours per week to read, study, and do assignments on their own.
+You should commit several hours per week to read, program, and do assignments on their own. You need to do **reading** and **programming** to master the material. Don't rely only on videos.
 
-Everyone is required to do the assigned work **individually**.  Please do not ask other students to "teach" you or copy work from anyone else.
+Everyone must do the assigned work **individually**.  Please do not ask other students to "teach" you or copy anything from anyone else.
 If you need help, please ask the TAs or instructors.
 
 ### Topics
@@ -32,20 +32,19 @@ If you need help, please ask the TAs or instructors.
 The weekly topics are posted on Google Classroom. 
 The course will cover at least [these topics](index).
 
-
-Reading material will come from these [resources](resources) as well as the [online Python documentation]().
+Reading material will come from these [resources](resources) as well as the [online Python documentation](https://docs.python.org/3.9.0/).
 
 ### Course Work & Grading
 
 The course and your grade include:
 
-* written exams 
-* programming exams
+* class participation
+* lab work
 * programming assignments
 * quizzes
 * homework
-* class participation
-* lab participation and lab work
+* written exams 
+* programming exams
 
 **Minimum Exam Score:** To pass the course you must have an **average exam score at least 50%**.
 
@@ -65,7 +64,7 @@ All assignments must be done **individually**, unless group work is explicitly a
 
 It is OK to discuss an approach to solving a problem, but not to share solutions or code.  If you need help, please ask the TAs or instructors rather than the other students (who may not give you the correct answer).
 
-### Copying == Fail
+### if copy(): fail()
 
 Anyone who submits **any** copied work will receive grade "F" and be reported to Faculty of Engineering for disciplinary action.
 
@@ -87,26 +86,26 @@ We use Github Classroom for assignments and quizzes. The way it works is:
 
 **Example**
 
-Your Github ID is `spiderman` and the assignment url is http://bit.ly/quiz1.
+Your Github ID is `spiderman` and the assignment url is http://bit.ly/lab1.
 
-* Visit http://bit.ly/quiz1 and accept the assignment.
+* Visit http://bit.ly/lab1 and accept the assignment.
 * Refresh the page. It shows your repo url is:
   ```
-  https://classroom.github.com/prog2022/quiz1-spiderman
+  https://classroom.github.com/prog2022/lab1-spiderman
   ```
 * Click on the link to visit the repo, so you can see the files and formated README.
 * Clone the repository to your computer. Using the ancient command line:
   ```shell
   # change to a directory where you store programming work
   cmd> cd /somepath/prog2/workspace
-  cmd> git clone https://classroom.github.com/prog2022/quiz1-spiderman
+  cmd> git clone https://classroom.github.com/prog2022/lab1-spiderman
   ```
-  This will create a local directory named `quiz1-spiderman` containing your work.    
-  Tip: you can specify a different name for the local directory. To create a local clone directory named "quiz1" (omit the -spiderman) use:
+  This will create a local directory named `lab1-spiderman` containing your work.    
+  Tip: you can specify a different name for the local directory. To create a local clone directory named "lab1" (omit the -spiderman) use:
   ```shell
-  cmd> git clone https://classroom.github.com/prog2022/quiz1-spiderman quiz1
+  cmd> git clone https://classroom.github.com/prog2022/lab1-spiderman lab1
   ```
-* Complete the quiz and test your code.
+* Complete the assignment and test your code.
 * Commit your work to Git.
   ```shell
   cmd> git status
@@ -127,7 +126,7 @@ Ref: [Github Classroom videos](https://classroom.github.com/videos)
 
 ### Assignments using Your Own Account 
 
-Some assignments don't use Github Classroom.  In this case, create a repository in your Github account (the one you used to join our class) and push your work to it. 
+For some assignments you will create a repository in your personal account instead of Github Classroom.  In this case, create a repository in your Github account (the one you used to join our class) and push your work to it. 
 
 Two things are important:
 1. The Github repo name must **use the exact name** specified in the assignment.  Please be careful to use correct spelling and correct case of letters (upper/lowercase). If you use the wrong name, you might not get credit.
@@ -149,33 +148,3 @@ where `repo_name` is the remote repository (which you must create on github.com)
 
 Note: By default, Github now calls the "master" branch "main". So you can write "main" instead of "master". I still prefer "master".
 
-
-## Prerequisite Knowledge
-
-You need to know:
-
-1. Everything that was covered in Programming 1, including methods, loops, conditional expressions, arrays and ArrayList, defining classes, and creating objects. 
-  * How to write and compile Java, including creating and using objects.
-2. How to use the command line on your computer, including these commands:
-  * How to display name of the current directory.
-  * How to change directory.
-  * How to list all the files in a directory.
-  * How to copy, move, or rename a file.
-  * How to delete a file.
-3. Where (what directory) is the Java SDK installed on your computer?
-4. How to use an IDE such as Eclipse, IntelliJ, or Netbeans.
-5. How to use Git and Github.
-  * Create a new local repository
-  * Add files to the repository
-  * Remove (delete) files in the repository
-  * Check status of your repository
-  * Add Github as a "remote" repository
-  * Copy your local repository to Github ("push")
-  * Create a local repository as a "clone" of a Github repository
-
----
-[skeoop.github.io]: https://skeoop.github.io
-[google-classroom]: https://classroom.google.com
-[resources]: https://skeoop.github.io/Resources
-[github-oop2018]: https://github.com/OOP2018
-[github-classroom]: https://classroom.github.com/classrooms/32051939-ske-programming-2

@@ -85,6 +85,7 @@ You should be able to understand common UML diagrams.
 [type-hints]: type-hints/introduction.md
 [python-abc-collections]: https://docs.python.org/3/library/collections.abc.html
 [python-typing]: https://docs.python.org/3/library/typing.html
+[GitVisualizer]: http://git-school.github.io/visualizing-git/ "Interative tool draws a graph of commits in a repo"
 
 ---
 

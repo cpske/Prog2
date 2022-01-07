@@ -11,29 +11,27 @@ navigation_order: 4
 | **Github** | We use [Github](https://github.com) for programming work, so you must have a Github account. 
 | **Schedule & Assignments** | Weekly Schedule is on [Google Classroom][google-classroom-classwork].
 | **Discord** | For Q&A, discussions, meetings <https://discord.gg/JZrgpJNb>
-| **Scores** | <https://bit.ly/PROG2022-scores> for classwork and homework 
+| **Scores** | Lab & homework scores posted on <https://bit.ly/PROG2022-scores>
 
 [google-classroom]: https://classroom.google.com/c/NDUxMTk5MjA4OTk0
 [google-classroom-classwork]: https://classroom.google.com/w/NDUxMTk5MjA4OTk0/t/all
 [google-meet]: https://meet.google.com/oco-cbri-gzu
 
 
-### How to Join [Google Classroom][google-classroom-link] and Join a Meeting
+### How to Join [Google Classroom][google-classroom] and Join a Meeting
 
-1. Join the [Google Classroom](https://classroom.google.com).  Use class code **[ka25cph][google-classroom-link]** or click this **[invitation link][google-classroom-link]**.
+1. Join the [Google Classroom](https://classroom.google.com).  Use class code in table above or click this **[invitation link][google-classroom]**.
 2. To join a meeting, click on the "Meet" link (video icon) on the Google Classroom page:
-[![classroom meet icon](images/classroom-meet-icon.png)][google-meet-link]
-   - You can also click this [Google Meet Link][google-meet-link] but it may change in the future.
-3. Complete this [Student Info Form](https://forms.gle/WE3jN4miDKabFBje8) so we know your Github ID.
-4. What online platform do you prefer? Please complete [Online Platform Preferences](https://forms.gle/VkG5MBPjgmxRX1xi7).
+[![classroom meet icon](images/google-meet-icon.png)][google-meet]
 
 
-### [Introduction to the Course](introduction/index)
-(click the above link for Intro)
+### [Introduction to the Course](introduction)
+
+Click the above link for Intro.
 
 ### Instructors
 
-[James Brucker](https://github.com/jbrucker) 
+[James Brucker](https://github.com/jbrucker) `email("J", "Brucker", 7)`
 
 Chaiporn Jaikaew `email("Chaiporn", "Jaikaew")`
 
@@ -54,12 +52,12 @@ DOMAIN = "ku.th"
 def email(firstname: str, lastname: str, nlast: int = 1) -> str:
     """Return the email address for a KU person."""
     # \u0040 is Unicode for 'at' symbol
-    return f"{firstname}.{lastname[0:nlast]}\u0040{DOMAIN}"
+    return f"{firstname}.{lastname[0:nlast]}\u0040{DOMAIN}".lower()
 ```
 
 *Why obfuscate email addresses?*    
 
-Software "bots" constantly scan the web for email addresses 
+Software "bots" scan the web for email addresses 
 and use them to send spam and phishing attacks.
 Some people disguise their email as "santaclaus at christmas dot com",
 but that is easily recognized by pattern matching.
