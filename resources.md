@@ -2,26 +2,19 @@
 title: Resources
 ---
 
-## Python Visual Tutor: [www.pythontutor.com](www.pythontotor.com)
+## Online Books & Tutorials
 
-Visualizes what Python code is doing to memory.
-
-## Anaconda and Miniconda Python Distributions
-
-In the 2nd half of the course you will use numpy, scipy, pandas and Jupyter notebooks. You can add these packages to an ordinary Python 3 installation, or install everything at once (including Python) using "Anaconda" or "Miniconda" bundles.
-
-These distributions provide Python along with many packages and a virtual environment manager.
-
-* [Anaconda](https://www.anaconda.com/download) approx 660 MB.
-* [Miniconda](https://conda.io/miniconda.html) approx 60 MB.
-
-## Online Books
-
-- [Composing Programs](http://composingprograms.com/), especially Chapter 1 (Functional Programming)
+- [Composing Programs](http://composingprograms.com/), we will cover at least Chapter 1 (Functional Programming)
 - [LearnPython](https://www.learnpython.org/) collection of topic-specific tutorials. The book *Learn Python* is one of the best Python books, but *too long*.
+- [Real Python](https://realpython.com) is a collection of tutorials, including advanced topics.  Some parts are paid access, others are free.
 - [Python Books on Github](https://github.com/pamoroso/free-python-books)
 - [Invent With Python](https://inventwithpython.com) has several books. Online versions are free.
-- [Think Python](https://greenteapress.com/thinkpython2/thinkpython2.pdf) beginning Python.
+- [Think Python](https://greenteapress.com/thinkpython2/thinkpython2.pdf) beginning Python. Used in Programming 1.
+
+### Python Visual Tutor
+
+[www.pythontutor.com](www.pythontotor.com)
+visualizes what Python code is doing to memory.
 
 ## Free Online Courses
 
@@ -34,10 +27,18 @@ These are highly recommended by multiple sources, but I have not tried them myse
 
 ## Paid Online Python Courses
 
-[Top 3 Python Courses](https://medium.com/codingthesmartway-com-blog/top-3-python-online-courses-8091e0dc8a79) at *Coding the Smart Way*:
+[Top Python Courses](https://medium.com/codingthesmartway-com-blog/top-3-python-online-courses-8091e0dc8a79) at *Coding the Smart Way*:
 
-1. [Python Bootcamp: Go from zero to hero](https://codingthesmartway.com/courses/python-bootcamp/) 12.5 hours.  You can perform exercises online using Jupyter Notebooks. 330 Baht.
-2. [Complete Python Master Class](https://codingthesmartway.com/courses/python-masterclass), 37.5 hours. 330 Baht.
+- [Python Bootcamp: Go from zero to hero](https://codingthesmartway.com/courses/python-bootcamp/) 12.5 hours.  You can perform exercises online using Jupyter Notebooks. 330 Baht.
+- [Complete Python Master Class](https://codingthesmartway.com/courses/python-masterclass) on Udemy, 37.5 hours. Price varies from 249 to 2,100 Bt.
+
+
+## Anaconda and Miniconda Python Distributions
+
+In the 2nd half of the course you will use numpy, scipy, pandas, and Jupyter notebooks. You can add these packages to your current Python 3 installation, or install everything at once (including Python) using the "Anaconda" or "Miniconda" bundles.
+
+* [Anaconda](https://www.anaconda.com/download) approx 660 MB
+* [Miniconda](https://conda.io/miniconda.html) approx 60 MB (much smaller, but you can add to it)
 
 
 ## Intel's Python and Python Channel for Anaconda

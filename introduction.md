@@ -30,6 +30,10 @@ If you need help, please ask the TAs or instructors.
 ### Topics
 
 The weekly topics are posted on Google Classroom. 
+The course will cover at least [these topics](index).
+
+
+Reading material will come from these [resources](resources) as well as the [online Python documentation]().
 
 ### Course Work & Grading
 

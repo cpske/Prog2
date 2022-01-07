@@ -8,11 +8,10 @@ navigation_order: 4
 | **Time** | Lecture Tues 9:00-12:00, Lab Thurs 9:00-12:00 beginning 11 Jan
 | -------------|--------------------------------------------------------
 | **Location** | Meet **online** using [Google Classroom][google-classroom] and [Google Meet][google-meet]. Class code: **uheeiyq**
-| **Github** | we use [Github](https://github.com) for programming work, so you must have a Github account. 
+| **Github** | We use [Github](https://github.com) for programming work, so you must have a Github account. 
 | **Schedule & Assignments** | Weekly Schedule is on [Google Classroom][google-classroom-classwork].
-| **Discord** | For Q&A, discussions, TA meetings <https://discord.gg/xxxxxxx>
-| **Sign-up & Preparation** | Please do this [Sign-up and Preparation](assignment/week1/signup-and-software) before the first class.
-| **Scores** | <https://bit.ly/xxxxxxxxxxxxxx> for classwork and homework 
+| **Discord** | For Q&A, discussions, meetings <https://discord.gg/JZrgpJNb>
+| **Scores** | <https://bit.ly/PROG2022-scores> for classwork and homework 
 
 [google-classroom]: https://classroom.google.com/c/NDUxMTk5MjA4OTk0
 [google-classroom-classwork]: https://classroom.google.com/w/NDUxMTk5MjA4OTk0/t/all
@@ -32,15 +31,21 @@ navigation_order: 4
 ### [Introduction to the Course](introduction/index)
 (click the above link for Intro)
 
+### Instructors
+
+[James Brucker](https://github.com/jbrucker) 
+
+Chaiporn Jaikaew `email("Chaiporn", "Jaikaew")`
+
+Piyamate Wisanuvej `email("Piyamate", "Visanuvej")`
+
 ### Teaching Assistants (TAs)
 
-[Anusid](https://github.com/ttxking)  `email("Anusid", "Wachiroachoroenwong")`
+[Poomtum](https://github.com/TopsonArcana) `email("Poomtum","Rattanarat")`
 
-[Chanathip](https://github.com/kaesrel) `email("Chanathip", "Thumkanon", 3)` 
+[Thanatibordee](https://github.com/ParnThanatibordee) `email("Thanatibordee","Sihaboonthong")` 	
 
-[Pattarin](https://github.com/pattarinn) `email("Pattarin", "Wongwaipanich", 3)` 
-
-[Sahanon](https://github.com/Sahanon-P) `email("Sahanon", "Phisetpakasit")`
+[Vitvara](https://github.com/vitvara) `email("Vitvara","Varavithya")`
 
 
 ```python

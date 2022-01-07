@@ -1,8 +1,11 @@
 # default theme is jekyll-theme-primer (https://github.com/pages-themes/primer)
+# to access these variables in pages, use {{site.variable}}
 theme: minima
-title: Individual Software Process
+title: SKE Programming 2
+email: j.brucker@ku.th
 #description Course Material for ISP
-url: "https://cpske.github.io/ISP/"
+url: "https://cpske.github.io/Prog2/"
+ISP: "https://cpske.github.io/ISP/"
 include: [code-quality, code-review]
 # if exclude 'code' then code-* is also excluded
 exclude: [bin, ISP, quiz, solution, misc, old, Gemfile, Gemfile.lock, Jittat, Paruj]
@@ -11,6 +14,9 @@ github_username: cpske
 # Use Git's markdown syntax
 markdown: kramdown
 # DON"T USE "permalink: pretty" it adds "/" after URLs of pages 
+
+# 10/20/2020 I hardcoded this into google_analytics.html
+google_analytics: "UA-104768257-3"
 
 
 # Default layout for pages, so you don't need to set "layout: page" in each
@@ -21,6 +27,3 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-
-# 10/20/2020 I hardcoded this into google_analytics.html
-google_analytics: "UA-104768257-3"
