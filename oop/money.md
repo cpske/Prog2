@@ -1,10 +1,19 @@
 ---
-title: OO Programming Example and Python Review
+title: OOP and Python Review
 ---
 
-## Starter Code
+This example includes a review of object-oriented programming basics,
+and how to apply them in Python.
 
-Please clone this assignment from Github Classroom -- URL given in class.
+Starter Code:
+
+Please clone this assignment from Github Classroom -- the URL given in class.
+
+1. Visit the URL and accept the assignment.
+   - you may be asked to associate your real name with your Github ID. Please do.
+2. Wait a few seconds (really!) and then click refresh. The page will refresh to show a link to your repo on Github.
+3. Click the link to visit your repository on Github.
+4. Clone the repo to your local computer.
 
 ## Money
 
@@ -22,7 +31,7 @@ class Money:
         self.currency = currency
 ```
 
-We add behavior to satisfy some requirements, described below.
+We will add behavior to satisfy some requirements.
 
 ### When is Money Equal?
 
@@ -64,23 +73,28 @@ They are called "magic" because Python invisibly calls them when you write certa
 | `x > y`         | `x.__gt__(y)`           |
 | `print(x)`, `str(x)` | `x.__str__()`      |
 | `z = x + y`     | `z = x.__add__(y)`      |
-| `z = x * y`     | `z = x.__mul__(y)`      |
+| `z = x * y`     |                         |
 
 ## Write `__eq__` for Money
 
 Write the code for `__eq__`:
 
 1. Two Money objects are equal if they have the same value and currency.
-2. Money is not equal to non-Money.  So `m1 == 10` should be False.
+2. Money is never equal to non-Money.  So `m1 == 10` should be False.
 
 **Push your code to Github**.
 
 ### Lesson Learned
 
-There is a standard "template" for an == method:
+There is a standard "template" for an == method. It has two steps
 
-1. verify the argument belongs to the same class as `self`, or at least a compatible class.
-2. compare the objects by value
+```
+def __eq__(self, other):
+    test that other is the same type as this (self).
+        if not, return False
+    compare the attributes of self and other 
+        according to whatever makes sense
+```
 
 ### Writing Good Code
 
@@ -94,6 +108,7 @@ You should write Docstring comments in methods, esp. public methods.
             other - a Money object to compare to this
         Returns:
             True if they have same value and currency, otherwise False
+        """
 ```
 There are other formats for writing docstrings.  
 See [ ] for more details.
@@ -148,8 +163,15 @@ and explain how the simple Money class illustrates each of them.
 
 ## Better Encapsulation using Properties
 
-Python does not have truly "private" attributes.
-Other parts of a code can modify an objects attributes:
+In O-O programming, we usually want to *encapsulate* and *hide* 
+details of how a class is implemented. 
+Only the *interface* (methods) should be visible to other parts of the program.
+This ensures data integrity and gives the programmer freedom to 
+change the way a class is implemented.
+
+But, Python does not have truly "private" attributes.
+
+Other parts of a code can modify an object's attributes:
 
 ```python
 m1 = Money(10.0, "Baht")
@@ -159,13 +181,10 @@ print(m1.value)
 m1.value = 10000
 ```
 
-In most applications, an object's attributes should be protected from direct
-modification by other parts of the code.  This ensures data integrity and
-gives the programmer freedom to change the way a class is implemented.
-
-We want to protect the value from change outside of the class.
+We want to protect the value from change outside of the Money class.
 
 You can make the "value" be read-only (*immutable*) in two steps:
+
 1. change the attribute name to `_value`
 2. write a `@property` named "value" that returns the `_value`
 
@@ -190,11 +209,31 @@ You can make the "value" be read-only (*immutable*) in two steps:
 AttributeError: can't set attribute
 ```
 
+### Exercise: Make the currency a property
+
+## Python Convention:  Don't Touch Anything Starting with Underscore
+
+Python relies on **convention** instead of enforcing rules for public/private.
+
+The Python convention is: you should **not** call or access any members of another
+class if the member name starts with underscore.
+
+| BAD         | CORRECT         |
+|-------------|-----------------|
+| `money._value` | `money.value` |
+| `money.__str__()` | `str(money)` |
+
+
 ## Throw Exceptions When Something is Wrong
 
 You studied exceptions in Programming 1.
 
 What are the 2 most common exception types in Python?
+
+|   Exception        | Meaning             |
+|--------------------|---------------------|
+|                    | Value of an argument is not allowed. |
+|                    | Type of an argument is incorrect or incompatible. |
 
 If you don't know, try this:
 ```python
@@ -206,17 +245,12 @@ and:
 import math
 math.sqrt(-1)
 
+# create a date: date(year, month, day)
 import datetime
-# create a date: date(YYYY, M, D)
-day = datetime.date(2022, 1, 32)
+day = datetime.date(2022, 1, 36)
 ```
 
-|   Exception        | Meaning             |
-|--------------------|---------------------|
-|                    | Value of an argument is not allowed. |
-|                    | Type of an argument is incorrect or incompatible. |
-
-### How to Raise an Exception
+### How to Raise or "Throw" an Exception
 
 The Exception classes allow you to specify a string message:
 ```python
@@ -224,16 +258,19 @@ def foo(x):
     """x must be an int."""
     if not isinstance(x, int):
         raise TypeError("Argument must be type 'int'")
+        print("this statement is NEVER printed")   <--- never reached
 ```
-when you raise an exception, the program flow exits the method or function immediately.
+when you raise an exception, the program flow immediately exits the method or function.
 
-## Money Should Raise Exceptions
+## Exercise: Money Should Raise Exceptions
+
+In the constructor:
 
 - if the currency is not a `str` raise a TypeError
 - if the currency is an empty string, raise a ValueError
 - if the value is not an int or float, raise a TypeError
 
-## Avoid String Literals for Special Values
+## No Magic Numbers (or Strings): Avoid String Literals for Special Values
 
 In Money, the currency is a string.  This can result in inconsistencies:
 ```python
@@ -251,16 +288,90 @@ There are 2 solutions for this.
    CURRENCY = "Baht"
    m1 = Money(10, CURRENCY)
    ```
-2. If you need to use several currencies, define an Enum.  An Enum is like a class with a fixed set of static attributes.  We'll study Enum later.
-It would be better to have a fixed set of currencies instead of using strings.
+2. If you need to use several currencies, define an Enum for currencies.  An Enum is a class with a fixed set of static values.  We'll study Enum later.
 
 
+## Operator Overloading
+
+We would like to be able to **add** money, like this:
+
+```python
+m1 = Money(10, "Baht")
+m2 = Money(20, "Baht")
+total = m1 + m2
+
+print(total)
+
+30 Baht
+```
+
+When you write `m1 + m2`, Python invokes `m1.__add__(m2)`.  
+
+This is called **operator overloading**.  
+We "overload" the "+" operator by redefining it to work on a new datatype (Money).
+
+
+But, you can only add money of the same currency:
+
+```python
+m1 = Money(10, "Baht")
+m2 = Money(20, "Ringgit")
+total = m1 + m2
+
+***ValueError: currencies must be the same
+```
+
+### Exercise: implement "+" for Money
+
+Write an `__add__` method that does what the Docstring comment says
+
+```python
+def __add__(self, other):
+    """Add two money objects having the same currency.
+
+    Arguments:
+        other - another money object to add to this one
+    Returns:
+        the sum of this money and other other as a new Money object
+    Raises:
+        ValueError if the object have different currencies
+```
+
+### Test Your Code
+
+explained in class
+
+## Overload Multiplication
+
+How can we compute *interest* or *VAT*?
+
+```python
+total = Money(198, "Baht")
+vat = total * 0.07
+```
+
+In this case, we want to compute Money x double. (It does not make sense to write Money x Money.)
+
+- What method do you need to implement for this?
+- What is the datatype of the parameter?
+
+### Exercise: Implement Money x double
+
+Write the method and a *docstring* comment.
 
 ## Summary
 
-1. Implement "magic methods" to provide needed behavior.
+1. Classes *encapsulate* data (attributes) and behavior (methods) related to a single "thing" or abstraction, such as Money, Person, Course.
 2. Class "members" with names beginning in underscore (`_`) should be treated as private. Don't directly access them, except inside the class or a subclass.
 3. Protect attributes from change (when desired) using properties.
-4. Document classes and public methods by writing *docstring* comments, including the meaning of parameters and return values.  It is OK to omit details for simple, obvious methods like `__str__`.
+4. Write *docstring* comments for classes and public methods to provide **documentation**. Include 
+   - first line is a sentence that briefly describes the method or class.
+   - then leave a blank line
+   - describe the Arguments (Parameters)
+   - describe the Return value, if any
+   - describe any exceptions Raised, and when they are raised
+   - It is OK to omit details for simple, obvious methods like `__str__`.
 5. Raise an exception when something is wrong. Don't silently ignore errors.
-6. Use a named constant for special values, not string or numeric literals.
+6. Use named constants for special values, not string or numeric literals.
+7. You can *overload* operators by implementing certain *magic methods*, such as `__eq__` for `==` (equality comparison) or `__add__` for "+".
+   - If you don't implement a magic method, then the superclass's method is invoked instead.
