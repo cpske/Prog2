@@ -89,19 +89,19 @@ We use Github Classroom for assignments and quizzes. The way it works is:
 Your Github ID is `spiderman` and the assignment url is http://bit.ly/lab1.
 
 * Visit http://bit.ly/lab1 and accept the assignment.
-* Refresh the page. It shows your repo url is:
+* Refresh the page. Github shows it created a repo for you at url:
   ```
   https://classroom.github.com/prog2022/lab1-spiderman
   ```
-* Click on the link to visit the repo, so you can see the files and formated README.
-* Clone the repository to your computer. Using the ancient command line:
+* Click on the link to visit your repo, so you can see the files and formated README.
+* Clone the repository to your computer. Using the command line:
   ```shell
   # change to a directory where you store programming work
   cmd> cd /somepath/prog2/workspace
   cmd> git clone https://classroom.github.com/prog2022/lab1-spiderman
   ```
   This will create a local directory named `lab1-spiderman` containing your work.    
-  Tip: you can specify a different name for the local directory. To create a local clone directory named "lab1" (omit the -spiderman) use:
+  *Tip*: you can specify a different name for the local directory. To create a local clone directory named "lab1" (omit the -spiderman) use:
   ```shell
   cmd> git clone https://classroom.github.com/prog2022/lab1-spiderman lab1
   ```
@@ -129,6 +129,7 @@ Ref: [Github Classroom videos](https://classroom.github.com/videos)
 For some assignments you will create a repository in your personal account instead of Github Classroom.  In this case, create a repository in your Github account (the one you used to join our class) and push your work to it. 
 
 Two things are important:
+
 1. The Github repo name must **use the exact name** specified in the assignment.  Please be careful to use correct spelling and correct case of letters (upper/lowercase). If you use the wrong name, you might not get credit.
 2. Make sure the Github repo is public or readable by instructor and TAs (if private).  Usually we will use public repos.
 

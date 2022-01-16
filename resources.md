@@ -9,7 +9,7 @@ title: Resources
 - [Real Python](https://realpython.com) is a collection of tutorials, including advanced topics.  Some parts are paid access, others are free.
 - [Python Books on Github](https://github.com/pamoroso/free-python-books)
 - [Invent With Python](https://inventwithpython.com) has several books. Online versions are free.
-- [Think Python](https://greenteapress.com/thinkpython2/thinkpython2.pdf) beginning Python. Used in Programming 1.
+- [Think Python](https://greenteapress.com/thinkpython2/html/thinkpython2018.html) or [PDF](https://greenteapress.com/thinkpython2/thinkpython2.pdf) textbook from Programming 1.
 
 ### Python Visual Tutor
 
