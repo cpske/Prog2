@@ -13,7 +13,7 @@ The problem is:
 
 A couple of things to note about this problem:
 
-1. we have to look at every element before we know the answer.  This is different from the `groupSum` problem where you can return as soon as you find the sum you want.
+1. we have to look at **every** element before we know the answer.  This is different from the `groupSum` problem where you can return as soon as you find the sum you want.
 2. we need a *helper method* to pass some information, such as the sum of elements in the first group and second group.
 
 ### What's the Base Case?
