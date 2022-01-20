@@ -1,4 +1,4 @@
-## Lab 2.2 Wallet
+## PA1: Digital Wallet
 
 Write a Wallet application where you can deposit and withdraw Cash.
 You will need the Money class you already wrote.
@@ -48,8 +48,8 @@ def __sub__(self, other):
 
 Create a file named `cash.py` containing 3 classes:
 
-* **Cash** - a subclass of Money.  It does not add any new behavior to Money, but the constructor verifies that the **value is positive** before calling the superclass constructor.  (*This is easy.*)
-  - if the value is not positive, raise a ValueError
+* **Cash** - a subclass of Money.  It does not add any new behavior to Money, but the constructor verifies that the **value is positive** before calling the superclass constructor.
+  - if the value is not positive, raise a **ValueError**.
 
 * **Coin** - a subclass of Cash.  Coin is like Cash with these changes:
   - it has a `_year` attribute that is the year the object was created (like the mint date on physical coins).
@@ -58,7 +58,7 @@ Create a file named `cash.py` containing 3 classes:
   - `str(coin)` returns the same thing as Money but append "Coin", for example "5 Baht Coin" or "0.50 Baht Coin".
 
 * **Banknote** - a subclass of Cash. Banknote is like Cash with these changes:
-  - the **value** must be evenly divible by 10.  No 5 Baht or 2.5 Baht banknotes. Raise the appropriate exception if the value is invalid.
+  - the **value** must be a power of 10 and a single digit, such as 10, 20, 50, 100, 500, 1000, 4000, or 1,000,000,000,000 (Zimbabwe has a 1-trillion dollar banknote, really!). No 5 Baht, 25 Baht, or 250 Baht banknotes. Raise the appropriate exception if the value is invalid.
   - it has a `_year` attribute this is the year the object was created
   - constructor computes the year itself! year is **not** a parameter.
   - a read-only property for the year
@@ -78,8 +78,8 @@ A Wallet stores cash.  It has these methods:
 | Method             | Definition                  |
 |--------------------|-----------------------------|
 |`__init__()`        | Initialize an empty wallet. |
-|`balance(currency: str): Money` | Get the total value of money in the wallet for a given currency. |
-|`deposit(*cash)`    | Deposit one or more cash items.  "deposit" should be atonomic. If any of the parameters are invalid, the entire operation is cancelled. You can deposit different currencies at the same time, but the arguments must all be Cash with a positive value. |
+|`balance(currency: str): Money` | Get the total value in the wallet for a given currency. |
+|`deposit(*cash)`    | Deposit one or more cash items.  "deposit" should be atonomic. If any of the parameters are invalid, the entire operation is cancelled. You can deposit different currencies at the same time, but the arguments must all be `Cash` (or a subclass) with a positive value. |
 |`is_empty(): bool`  | Test if the wallet is empty. |
 |`get_items(): List` | Return a **copy** of the list of items in the Wallet. A shallow copy is returned (since the Cash objects are immutable it isn't necessary to copy them). |
 |`withdraw(money): List` | Withdraw a requested amount (Money) from the wallet. Return a list of cash objects from the wallet or `None` if the exact amount cannout be withdrawn.  This method respects currency, so withdraw(Money(5,'Baht')) is different from withdraw(Money(5,'Rupee')). |
@@ -96,16 +96,16 @@ Money(0, 'Baht')
 15 Baht
 >>> print(wallet.balance("Dollars"))
 20 Dollars
->>> print(wallet.balance("Rupee"))
-0 Rupee
+>>> wallet.balance("Rupee")
+Money(0, 'Rupee')
 >>> wallet.deposit(Banknote(20,'Baht'))
 >>> wallet.get_items()
 [Coin(5,'Baht'), Banknote(20,'Dollars'), Coin(10,'Baht'), Banknote(20,'Baht')]
->>> wallet.withdraw(Money(30,'Baht'))
+>>> wallet.withdraw( Money(30,'Baht') )
 [Coin(10,'Baht'), Banknote(20,'Baht')]
->>> wallet.withdraw(Money(10,'Baht')
+>>> wallet.withdraw( Money(10,'Baht') )
 None
->>> wallet.balance('Baht')   # returns Money
+>>> wallet.balance('Baht')
 Money(5,'Baht')
 ```
 
