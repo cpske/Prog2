@@ -71,7 +71,7 @@ Create a file named `cash.py` containing 3 classes:
 ![Class diagram of Wallet and Cash hierarchy](money-cash-wallet.png)
 
 
-### 3. Write a Wallet class
+### 3. Write a Wallet class in `wallet.py`
 
 A Wallet stores cash.  It has these methods:
 
@@ -84,13 +84,37 @@ A Wallet stores cash.  It has these methods:
 |`get_items(): List` | Return a **copy** of the list of items in the Wallet. A shallow copy is returned (since the Cash objects are immutable it isn't necessary to copy them). |
 |`withdraw(money): List` | Withdraw a requested amount (Money) from the wallet. Return a list of cash objects from the wallet or `None` if the exact amount cannout be withdrawn.  This method respects currency, so withdraw(Money(5,'Baht')) is different from withdraw(Money(5,'Rupee')). |
     
+Example:
+```
+>>> wallet = Wallet()
+>>> wallet.is_empty()
+True
+>>> wallet.balance("Baht")
+0 Baht
+>>> wallet.deposit(Coin(5,"Baht"), Banknote(20,"Dollars"), Coin(10,"Baht"))
+>>> print(wallet.balance("Baht"))
+15 Baht
+>>> print(wallet.balance("Dollars"))
+20 Dollars
+>>> print(wallet.balance("Rupee"))
+0 Rupee
+>>> wallet.deposit(Banknote(20,'Baht'))
+>>> wallet.get_items()
+[Coin(5,'Baht'), Banknote(20,'Dollars'), Coin(10,'Baht'), Banknote(20,'Baht')]
+>>> wallet.withdraw(Money(30,'Baht'))
+[Coin(10,'Baht'), Banknote(20,'Baht')]
+>>> wallet.withdraw(Money(10,'Baht')
+None
+>>> wallet.balance('Baht')   # returns Money
+Money(5,'Baht')
+```
 
 ### 4. Write a "Helper Function" to Perform Recursive Withdraw
 
 To implement withdraw you need to use recursion.  The algorithm is nearly the same as the `groupsum` recursion problem.  The only differences are:
 
 * objects are Cash (or Money) instead of "int"
-* you need to check the currency. Only withdraw items that have the correct currency.
+* you need to check that the currency matches what is desired. Only withdraw items that have the correct currency.
 
 I suggest you write a helper function named `withdraw_from`:
 ```python
