@@ -67,7 +67,8 @@ Create a file named `cash.py` containing 3 classes:
     ```
   - `str(banknote)` returns the same thing as Money but append "Banknote", for example "1,000 Baht Banknote"
 
-![money-cash-wallet.png](Class diagram of Wallet and Cash hierarchy)
+
+![Class diagram of Wallet and Cash hierarchy](money-cash-wallet.png)
 
 
 ### 3. Write a Wallet class
@@ -135,7 +136,7 @@ Where to write `withdraw_from`?  It could be either:
     22
     !
     ```
-   - for a method with variable number of arguments, write the "self" parameter before the var-args:
+   - for a **method** with variable number of arguments, write the "self" parameter before the var-args:
      ```python
      def methodname(self, *args)
      ```
@@ -153,3 +154,7 @@ Where to write `withdraw_from`?  It could be either:
   lst
   [1, 2, 3]
   ```
+
+* What's a shallow copy?    
+  A **shallow** copy copies the list, but does not make a copy of each object in the list.  Instead it just references the same objects as the original list.    
+  Is this a problem?  No - because Money and Cash are *immutable*, so there is no danger of someone accidentally changing these objects in the Wallet.
