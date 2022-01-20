@@ -89,8 +89,8 @@ Example:
 >>> wallet = Wallet()
 >>> wallet.is_empty()
 True
->>> wallet.balance("Baht")
-0 Baht
+>>> wallet.balance("Baht")    # returns a Money object
+Money(0, 'Baht')
 >>> wallet.deposit(Coin(5,"Baht"), Banknote(20,"Dollars"), Coin(10,"Baht"))
 >>> print(wallet.balance("Baht"))
 15 Baht
@@ -180,5 +180,5 @@ Where to write `withdraw_from`?  It could be either:
   ```
 
 * What's a shallow copy?    
-  A **shallow** copy copies the list, but does not make a copy of each object in the list.  Instead it just references the same objects as the original list.    
-  Is this a problem?  No - because Money and Cash are *immutable*, so there is no danger of someone accidentally changing these objects in the Wallet.
+  For a list, a **shallow** copy copies the list but does not make a copy of each element in the list.  Instead it just *references* the same objects as the original list.    
+  Is this a problem?  No - because Money and Cash are *immutable*. So two lists (wallet.items and the returned list) can refer to the same Cash object, but code cannot change the Cash object.
