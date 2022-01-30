@@ -111,12 +111,19 @@ class Banknote(Cash):
 
 **Are you bored yet?**
 
+
 ### Learn a Programming Language Well and Use it Fluently
 
 Learn your programming language **very well**.  Avoid these problems:
 
 * waste time writing extra code for things the language provides
 * errors due to misunderstanding of what the code does
+
+> Employers say they want programmers to know one or two languages very well,
+> rather than know a little about many programming languages.
+>
+> It's useful to know several programming languages, but you should strive to master at least one.
+
 
 In `Wallet`:
 
@@ -139,31 +146,6 @@ append a collection to existing list:
 ```python
    self.items.extend(args)
 ```
-
-Another example:
-```python
-    def balance(self, currency) -> Money:
-        """Return the balance for a given currency."""
-        total = 0
-        for i in self.items:
-            if currency == i.currency:  # compute the same currency
-                total += i.value
-        return Money(total, currency)
-```
-
-Simpler:
-```python
-    def balance(self, currency) -> Money:
-        total = sum(cash.value for cash in self.items
-                               if cash.currency == currency)
-        return Money(total, currency)
-```
-
-> Employers say it is better from programmers to know one or two languages
-> very well, than to know a little about many programming languages.
->
-> It's useful to know several programming languages, but you should strive to master at least one.
-
 ### Do Not Put Top-Level Executable Code in a Module that Other Code will Import
 
 Every time you `import something`, any top-level code in `something.py` is executed.
@@ -171,7 +153,6 @@ Every time you `import something`, any top-level code in `something.py` is execu
 In wallet.py
 ```python
 class Wallet:
-    ...
     ...
 
 
@@ -183,3 +164,27 @@ print("Balance is", wallet.balance())
 
 The test code is executed every time wallet is imported (as in unit tests).
 
+### Remove TODO Comments When Done!
+
+"TODO" comments are a common programming convention.
+The IDE recognize them and will show them in a special panel.
+
+PyCharm even has a "TODO" tab at the bottom (example: wallet-start).
+
+Please **remove the TODO comments after you do them**.
+Don't submit code with "TODO", unless you didn't do it.
+
+```python
+class Cash(Money):
+
+    def __init__(self, value: float, currency):
+        """Initial a new cash object. value must be positive."""
+        #TODO verify the value is positive
+```
+
+or
+```java
+public void add(Money other) {
+    //TODO add assert statements that other is not null or wrong currency
+
+```
