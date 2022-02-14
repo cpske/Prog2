@@ -19,14 +19,13 @@ title: Graphic and Graphical User Interfaces
   video [part 1](https://drive.google.com/file/d/1icC_v8kMiS_mAlhC6D__fGv15sgrcFVF/view), [part 2](https://drive.google.com/file/d/1eg1Ei_HQaop8U2Jf1EDU5Uk-_PnOv60t/view)
 
 
-
 ## Graphics Frameworks for Python
 
 The "best" GUI frameworks for Python are:
 
-1. [Tkinter][Tkinter] - part of the Python distribution and has lots of learning resources and add-on packages.  API is kind of clumsy (strings for setting non-string attributes) and inconsistent. Lacks a clear separation between layout managers and containers.  Official documentation sometimes refers to Tk/Tcl documentation, which is not helpful (who has time to go read the Tk/Tcl documentation and then *translate* the function calls to their Python equivalent).
+1. [Tkinter][Tkinter] - part of the Python distribution and has lots of learning resources and add-on packages.  API is versatile but kind of clumsy (strings for setting non-string attributes) and inconsistent. Lacks a clear separation between layout managers and containers.  
 
-2. [PyQt5][PyQt5] built on the Qt cross-platform GUI framework.  Powerful and extensive framework, but requires Qt5 (heavy-weight framework) be installed, too. PyQt4 and PyQt5 are developed by a private company and has some licensing requirements.
+2. [PyQt5][PyQt5] built on the Qt cross-platform GUI framework.  Powerful and extensive framework, but requires Qt5 be installed, too. PyQt4 and PyQt5 are developed by a private company and has some licensing requirements.
 
 3. [wxPython][wxPython] a wrapper for the wsWidgets API, to create platform-native user interfaces.
 
@@ -43,12 +42,16 @@ Ref: [6 Best Python GUI Frameworks](https://pythongui.org/6-best-python-gui-fram
 [libavg]: https://www.libavg.de/site/
 
 
+## Using a Frame to Construct more Complex UI
+
+<https://www.pythontutorial.net/tkinter/tkinter-frame/> create a form using a frame, but the code is not O-O style. Doesn't clearly show the Composite Pattern.
+
 ## Learn Tkinter
 
-- [Introduction to Tkinter](https://www.cs.mcgill.ca/~hv/classes/MS/TkinterPres/) on cs.mcgill.ca.  Comprhensive, readable description as a single web page.
 - [Tkinter Tutorial](https://www.pythontutorial.net/tkinter) on <https://www.pythontutorial.net>.
 - [Tkinter reference](https://tkdocs.com/shipman/) by John Shipman includes a lot of example code.
 - <https://python-course.eu/tkinter/> on [Python-course.eu](https://python-course.eu) another good intro & reference.
+- [Introduction to Tkinter](https://www.cs.mcgill.ca/~hv/classes/MS/TkinterPres/) on cs.mcgill.ca.  Comprhensive, readable description as a single web page.
 - Widgets <https://tkdocs.com/tutorial/widgets.html> on <https://tkdocs.com/>.
 - [Thinking Tkinter](http://thinkingtkinter.sourceforge.net/) explains concepts behind Tkinter apps using a sequence of simple Python apps. Includes a lot of "how to" for event binding and event handlers.
 - *Tkinter Programming* by Jan Bodnar, PDF document (free online).
