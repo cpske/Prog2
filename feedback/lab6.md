@@ -111,10 +111,12 @@ In my code, I select the 1st unit in left combobox and 2nd unit in the right com
 
 ## 4. Bad Logic in `convert_handler`
 
-Many students seem to (almost deliberately) use bad logic.
+some students seem to use bad logic (almost deliberately).
 
-Instead of checking "is there a value in box1?" this code checks "is box2 empty?"
-They are not the same.  As a result, this code will raise exception if both boxes are empty when "Convert" is pressed:
+Instead of checking "*is there a value in box1?*" this code checks "*is box2 empty?*"
+
+They are not the same.     
+As a result, this code raises exception if both boxes are empty when "Convert" is pressed:
 
 ```python
 if self.entry_2.get() == "":
@@ -129,7 +131,7 @@ else:
 
 ## 5. Don't Use Fixed Size Window!
 
-Isaraa wrote this:
+Many students wrote code like this:
 
 ```python
     def __init__(self, converter: UnitConverter):
@@ -141,13 +143,14 @@ Isaraa wrote this:
 ```
 
 **Do not** set the window size and **almost never** set `resizable(false)`.
+Even if a fixed-size UI looks fine on *your* machine, there is a good chance
+is will not be correct on another machine with different OS,
+different fonts, or different display resolution (or dpi).
 
-I mentioned this is class. The UI should manage it's own size.
-What if the user wants a wider window in order to see more digits of the conversion?
+I mentioned this is class.
 
-These students wrote `self.resizable(False, False)` (even though you only need to write **one** parameter):
+These students wrote `self.resizable(False, False)`:
 
-```python
 | Student | Bad Code |
 |---------|----------|
 | Isaraa |   self.resizable(False, False) |
@@ -166,9 +169,8 @@ These students wrote `self.resizable(False, False)` (even though you only need t
 | Setthanan |  self.resizable(False, False) |
 | Siravich |   self.resizable(False, False) |
 | Supakrit |   self.resizable(False, False) |
-```
 
-These students also set the window size instead of letting it size to fit the components:
+These students also set the window size instead of letting the geometry manager decide what size is best:
 
 | Student | Bad Code |
 |---------|----------|
@@ -187,9 +189,6 @@ Siravich   | self.geometry("720x40") |
 Thanadol   | self.geometry('730x40') |
 Thanida    | self.geometry('800x40') |
 Wongsathorn | self.geometry("800x40") |
-
-
-
 
 
 ## Less Boring Code: Automatic Column Calculation
