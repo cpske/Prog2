@@ -251,7 +251,23 @@ button.grid(row=1, column=1)              # not sticky. Retains natural size.
 ```
 
 ---------------------------------------------------------
+## Control Variables
 
+Many Tk components use a *control variable* to get/set attributes of a component.  These variables can generate events, so your code can be notified when the value changes.
+
+| Control Variable    | Type of Value  |
+|---------------------|----------------|
+| tk.StringVar()      | str            |
+| tk.IntVar()         | int            |
+| tk.DoubleVar()      | double         |
+| tk.BooleanVar()     | bool           |
+
+to add an event handler to a control variable use:
+```python
+var = tk.StringVar()   # or any control var
+var.trace(...)
+```
+---------------------------------------------------------
 ## References
 
 * [Tkinter 8.5 reference](https://tkdocs.com/shipman/) the best Tkinter introduction and reference, by John Shipman at New Mexico Tech.
