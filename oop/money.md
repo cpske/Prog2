@@ -43,6 +43,7 @@ Try this:
 >>> m1 = Money(10, "Baht")
 >>> m2 = Money(10, "Baht")
 >>> m1 == m2
+False
 ```
 
 How to fix this?

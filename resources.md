@@ -2,35 +2,28 @@
 title: Resources
 ---
 
-## Online Books & Tutorials
+### Online Books & Tutorials
 
-- [Composing Programs](http://composingprograms.com/), we will cover at least Chapter 1 (Functional Programming)
+- [Composing Programs](http://composingprograms.com/) from MIT. Chapter 1 is Functional Programming, which we will cover.
 - [LearnPython](https://www.learnpython.org/) collection of topic-specific tutorials. The book *Learn Python* is one of the best Python books, but *too long*.
 - [Real Python](https://realpython.com) is a collection of tutorials, including advanced topics.  Some parts are paid access, others are free.
-- [Python Books on Github](https://github.com/pamoroso/free-python-books)
 - [Invent With Python](https://inventwithpython.com) has several books. Online versions are free.
 - [Think Python](https://greenteapress.com/thinkpython2/html/thinkpython2018.html) or [PDF](https://greenteapress.com/thinkpython2/thinkpython2.pdf) textbook from Programming 1.
+- [Python Books on Github](https://github.com/pamoroso/free-python-books)
 
 ### Python Visual Tutor
 
 [www.pythontutor.com](www.pythontotor.com)
 visualizes what Python code is doing to memory.
 
-## Free Online Courses
+### Free Online Courses
 
 These are highly recommended by multiple sources, but I have not tried them myself.
 
 - [Intro to Python](https://www.datacamp.com/courses/intro-to-python-for-data-science/) at [DataCamp](https://www.datacamp.com).
 - [Python for Everyone](https://www.py4e.com/lessons) basic and intermediate Python
 - Jupyter Notebooks for [Interactive Data Science](https://github.com/mlund/jupyter-course), material on Github.
-- [Introduction to Interactive Programming in Python](https://www.coursera.org/learn/interactive-python-1) on Coursera, 5 weeks for complete beginners. Teaches interactive and graphical programming.
-
-## Paid Online Python Courses
-
-[Top Python Courses](https://medium.com/codingthesmartway-com-blog/top-3-python-online-courses-8091e0dc8a79) at *Coding the Smart Way*:
-
-- [Python Bootcamp: Go from zero to hero](https://codingthesmartway.com/courses/python-bootcamp/) 12.5 hours.  You can perform exercises online using Jupyter Notebooks. 330 Baht.
-- [Complete Python Master Class](https://codingthesmartway.com/courses/python-masterclass) on Udemy, 37.5 hours. Price varies from 249 to 2,100 Bt.
+- [Introduction to Interactive Programming in Python, Part 1](https://www.coursera.org/learn/interactive-python-1) and [Part 2](https://www.coursera.org/learn/interactive-python-2) on Coursera, for beginners. Teaches interactive and graphical programming.
 
 
 ## Anaconda and Miniconda Python Distributions
